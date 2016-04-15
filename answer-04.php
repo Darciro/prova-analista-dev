@@ -48,11 +48,17 @@
 					</div>
 				</div>
 
+				<div class="api-list-wrapper">
+					<ul>
+						<li></li>
+					</ul>
+				</div>
+
 				<figure class="highlight">
 					<pre>
 					<?php
-					require_once('api/Api.php');
-					/*require_once('api/Database.php');
+					// require_once('lib/API.php');
+					/*require_once('lib/Database.php');
 					$db = Database::getInstance();
 					$mysqli = $db->dbConn();
 					$sql_query = 'SELECT * FROM tasks ORDER BY task_priority';
@@ -63,9 +69,12 @@
 						}
 					}*/
 
-					$api = new Api;
+					/*$api = new Api;
 					$xxx = $api->getTasks();
-					var_dump($xxx);
+					var_dump($xxx);*/
+
+
+
 					?>
 
 					<?php // highlight_file( 'source-code/source-03-01.php' ); ?>
@@ -77,5 +86,6 @@
 
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/global.js"></script>
 </body>
 </html>
