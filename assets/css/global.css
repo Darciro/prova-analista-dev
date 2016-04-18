@@ -6,3 +6,18 @@ code{
 	margin-bottom: 30px;
 	border-bottom: 1px solid #e5e5e5;
 }
+.tasks-table tr{
+	cursor: move;
+}
+.tasks-table .checkbox-header{
+	width: 30px;
+}
+.task-completed,
+.task-completed:hover{
+	color: #BDBDBD;
+}
+.ui-state-highlight{
+	background-color: #eee;
+	border: 1px solid #333;
+	min-height: 37px;
+}
