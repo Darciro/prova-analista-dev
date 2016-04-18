@@ -1,7 +1,7 @@
 (function($){
 	$(document).ready(function () {
 		// Update this URL to match the project URL
-		var root_url = 'http://localhost/prova-analista-dev/api';
+		var root_url = 'http://localhost/prova-analista-dev/';
 
 		renderList();
 		function renderList(data) {
@@ -14,7 +14,7 @@
 			tasksTable.find('tbody tr').not('.loading').remove();
 			// GET Method to retrieve all tasks
 			$.ajax({
-				url: root_url + '/tasks/',
+				url: root_url + 'api/tasks/',
 				dataType: 'json',
 				type: 'GET'
 			})
@@ -45,7 +45,7 @@
 
 			// PUT Method to update a task based on it's ID
 			$.ajax({
-				url: root_url + '/tasks/' + '?' + $.param({
+				url: root_url + 'api/tasks/' + '?' + $.param({
 					update: true,
 					task_id: task_id,
 					task_priority: task_priority
@@ -82,7 +82,7 @@
 					var task_id = $('.tasks-table tbody input[type=checkbox]:checked').first().closest('tr').addClass('editing').data('task-id')
 					// PUT Method to update a task based on it's ID
 					$.ajax({
-						url: root_url + '/tasks/' + '?' + $.param({
+						url: root_url + 'api/tasks/' + '?' + $.param({
 							task_id: task_id,
 							task_name: task_name,
 							task_desc: task_desc,
@@ -102,7 +102,7 @@
 					});
 				}else{
 					$.ajax({
-						url: root_url + '/tasks/',
+						url: root_url + 'api/tasks/',
 						dataType: 'json',
 						data: {
 							task_name: task_name,
@@ -128,7 +128,7 @@
 					});
 					// DELETE Method to erase a task based on it's ID
 					$.ajax({
-						url: root_url + '/tasks/' + '?' + $.param({task_ids: task_ids}),
+						url: root_url + 'api/tasks/' + '?' + $.param({task_ids: task_ids}),
 						dataType: 'json',
 						type: 'DELETE'
 					})
